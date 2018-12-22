@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>CSVParser</title>
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   
+
+    <pre id="content"></pre>
+
+    <div id="leftWindow">
+        <div id="help" style="text-indent:10px">
+            <a href="https://nina1603.github.io/maptaxonomy/site/js/helppage/help.html" target="_blank" title="First time use? Press here to find out how to do it">Help</a>
+        </div>
+
+        <br><input placeholder="web address" type="text" id="tableId"></input>
+        <br> <input placeholder="page name + range" type="text" id="pageId"></input>
+        <br><br><input type="submit" id="SendButton" value="Send"></input>
+        <input type="button" id="ClearButton" value="Clear" onclick="removeAll();"></input>
+        
+
+    </div>
+
+
+    <script type="application/javascript" src="init.js">
+    </script>
+
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA6tIfdstDmqeKNMhA_tWYo4Xm0oYizc0&callback=initMap&&libraries=geometry">
+    </script>
+
+    <script type="application/javascript" src="googleSheetsParse.js">
+    </script>
+
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){}; handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+</body>
+
+</html>
